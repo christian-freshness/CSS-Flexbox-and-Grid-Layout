@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --one-bg: hsl(31, 77%, 52%);
+    --two-bg: hsl(184, 100%, 22%);
+    --three-bg: hsl(179, 100%, 13%);
+    --main-bg-headings-buttons: hsl(0, 0%, 95%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75); 
+}
+body{
+    background-color: var(--main-bg-headings-buttons);
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+
+}
+.container{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    font-size: 20px;
+}
+#laz{
+    text-decoration: solid;
+    color: seagreen;
+    padding: 10px 20px;
+}
+.box{
+
+    padding: 50px 30px 40px 30px;
+}
+.box h1{
+    font-family: 'Big Shoulders Display';
+    
+    color: var(--main-bg-headings-buttons);
+    margin: 30px 0;
+}
+.box p{
+    font-size: 15px;
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca';
+    margin-bottom: 70px;
+    font-weight: 400;
+}
+.box button{
+    background-color: var(--main-bg-headings-buttons);
+    border-radius: 20px;
+    border: 1px solid var(--main-bg-headings-buttons);
+    padding: 10px 20px;
+}
+.box button:hover{
+    background-color: rgba(225,225,225,0);
+    color: white;
+    cursor: pointer;
+}
+.one{
+    background-color: var(--one-bg);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.one button{
+    color: var(--one-bg);
+}
+.two{
+    background-color: var(--two-bg);
+}
+.two button{
+    color: var(--two-bg);
+}
+.three{
+    background-color: var(--three-bg);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.three button{
+    color: var(--three-bg);
+}
+
+@media screen and (max-width: 1024px){
+    .box{
+        padding:25px;
+
+    }
+}
+
+@media screen and (max-width: 768px){
+    .box h1{
+        font-size: 25px;
+    }
+    .box p{
+        font-size: 13px;
+    }
+    .box{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .container{
+        flex-direction: column;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        width: 250px;
+    }
+    .box p{
+        text-align: center;
+    }
+    .one{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+    .three{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+}
